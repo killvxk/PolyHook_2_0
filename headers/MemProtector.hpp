@@ -6,9 +6,13 @@
 #define POLYHOOK_2_MEMORYPROTECTOR_HPP
 
 #include "headers/Enums.hpp"
+#ifndef WIN32_LEAN_AND_MEAN
 #define WIN32_LEAN_AND_MEAN
+#endif
+#ifndef NOMINMAX
 #define NOMINMAX
-#include <Windows.h>
+#endif
+#include <windows.h>
 #include <iostream>
 
 PLH::ProtFlag operator|(PLH::ProtFlag lhs, PLH::ProtFlag rhs);
